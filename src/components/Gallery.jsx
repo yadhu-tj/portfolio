@@ -13,8 +13,8 @@ const projects = [
     description: "An immersive digital art gallery experience built to redefine how we view creativity on the web.",
     tech: ["Python", "WebGL", "SQL"],
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
-    githubLink: "https://github.com/yourusername/project1", // REPLACE THESE
-    liveLink: "#"
+    githubLink: "https://github.com/yadhu-tj/ART-BAY.git", 
+    liveLink: "https://artbay.pythonanywhere.com"
   },
   {
     id: "02",
@@ -33,7 +33,7 @@ const projects = [
     description: "The very site you are looking at. A performance-first showcase of motion, physics, and design.",
     tech: ["React", "GSAP", "Lenis"],
     image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2680&auto=format&fit=crop",
-    githubLink: "https://github.com/yourusername/portfolio",
+    githubLink: "https://github.com/yadhu-tj/portfolio.git",
     liveLink: "#"
   }
 ];
