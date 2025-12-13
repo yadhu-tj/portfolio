@@ -14,7 +14,7 @@ const projects = [
     tech: ["Python", "WebGL", "SQL"],
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
     githubLink: "https://github.com/yadhu-tj/ART-BAY.git", 
-    liveLink: "https://artbay.pythonanywhere.com"
+    liveLink: "https://Yadhu4u.pythonanywhere.com"
   },
   {
     id: "02",
