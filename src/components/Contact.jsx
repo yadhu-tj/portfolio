@@ -6,7 +6,7 @@ const Contact = () => {
   const buttonRef = useRef(null);
   const containerRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
-  const [buttonText, setButtonText] = useState("EMAIL ME"); // State for text change
+// const [buttonText, setButtonText] = useState("EMAIL ME"); // Removed state
   
   // REPLACE THIS WITH YOUR REAL EMAIL
   const MY_EMAIL = "yadhunandhantj@gmail.com"; 
@@ -14,6 +14,7 @@ const Contact = () => {
   const mouse = useRef({ x: 0, y: 0 });
   const xTo = useRef(null);
   const yTo = useRef(null);
+  
 
   // --- 1. MOUSE FOLLOWER ---
   useEffect(() => {
@@ -121,16 +122,9 @@ const Contact = () => {
     };
   }, [isHovering]);
 
-  // --- 3. COPY TO CLIPBOARD FUNCTION ---
-  const handleCopy = () => {
-    navigator.clipboard.writeText(MY_EMAIL);
-    setButtonText("COPIED!");
-    setIsHovering(false); // Optional: Release the physics slightly
-    
-    // Reset text after 2 seconds
-    setTimeout(() => {
-        setButtonText("EMAIL ME");
-    }, 2000);
+  // --- 3. REDIRECT TO GMAIL FUNCTION ---
+  const handleRedirect = () => {
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${MY_EMAIL}`, '_blank');
   };
 
   return (
@@ -154,7 +148,7 @@ const Contact = () => {
           className="relative z-20"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
-          onClick={handleCopy} // CLICK TO COPY
+          onClick={handleRedirect} // CLICK TO REDIRECT
       >
           <div 
               ref={buttonRef}
@@ -164,13 +158,8 @@ const Contact = () => {
               <div className="absolute inset-0 bg-white/5 blur-xl group-hover:bg-cyan-500/20 transition-colors duration-500"></div>
               
               <div className="relative flex flex-col items-center gap-2 z-10">
-                  <span>{buttonText}</span>
-                  {/* Change Icon based on state */}
-                  {buttonText === "EMAIL ME" ? (
-                     <svg className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                  ) : (
-                     <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                  )}
+                  <span>EMAIL ME</span>
+                  <svg className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </div>
           </div>
       </div>
