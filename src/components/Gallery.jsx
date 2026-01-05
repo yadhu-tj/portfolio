@@ -9,7 +9,7 @@ const projects = [
   {
     id: "01",
     title: "Digital Canvas",
-    category: "MCA Mini-Project",
+    category: "BCA Project",
     description: "An immersive digital art gallery experience built to redefine how we view creativity on the web.",
     tech: ["Python", "WebGL", "SQL"],
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
@@ -18,8 +18,8 @@ const projects = [
   },
   {
     id: "02",
-    title: "EduTech Core",
-    category: "Mobile Application",
+    title: "Turf Bay",
+    category: "Web Application",
     description: "A comprehensive training and exam platform featuring real-time analytics and article sharing.",
     tech: ["Flutter", "Django", "SQL"],
     image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop",
@@ -34,7 +34,7 @@ const projects = [
     tech: ["React", "GSAP", "Lenis"],
     image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2680&auto=format&fit=crop",
     githubLink: "https://github.com/yadhu-tj/portfolio.git",
-    liveLink: "#"
+    liveLink: "https://cheery-croissant-a8aa59.netlify.app/"
   }
 ];
 
