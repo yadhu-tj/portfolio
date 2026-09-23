@@ -11,7 +11,7 @@ const projectsData = [
     description: "Replaces rigid dropdown filters with semantic understanding. Users describe ideal living arrangements in natural language (e.g., 'a quiet apartment near Infopark for night-shift work'), and a custom RAG pipeline retrieves and justifies matching properties using real broker notes.",
     tech: ["Python", "Flask", "PostgreSQL", "ChromaDB", "LangChain", "Gemini API", "React"],
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2573&auto=format&fit=crop",
-    githubLink: "https://github.com/yadhu-tj",
+    githubLink: "https://github.com/yadhu-tj/nestQuest",
     liveLink: "#",
     metrics: [
       { label: "Vector Search", value: "ChromaDB" },
@@ -45,7 +45,7 @@ const projectsData = [
     description: "Players physically walk in place and lean their body to race through a procedurally generated neon 3D maze, answering quiz questions at blast doors using arm gestures. Auto-calibrates to individual player noise and streams live telemetry over WebSockets. Drew acquisition interest from an AI/robotics company at an exhibition.",
     tech: ["MediaPipe Pose", "OpenCV", "Three.js r160", "Python", "Socket.IO", "Gemini 2.5"],
     image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop",
-    githubLink: "https://github.com/yadhu-tj",
+    githubLink: "https://github.com/yadhu-tj/Project-AI",
     liveLink: "#",
     metrics: [
       { label: "Frame Telemetry", value: "Real-Time" },
@@ -79,7 +79,7 @@ const projectsData = [
     description: "Modern e-commerce platform featuring an intelligent conversational AI shopping assistant with a 1M token context window, vector-based product discovery with Pinecone, sentence-transformer embeddings, persistent cart management, and real-time inventory synchronization.",
     tech: ["Flask", "Next.js", "Pinecone", "LangChain", "Gemini Flash 2.0", "Sentence Transformers"],
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2668&auto=format&fit=crop",
-    githubLink: "https://github.com/yadhu-tj",
+    githubLink: "https://github.com/yadhu-tj/eCommerce-Sample",
     liveLink: "#",
     metrics: [
       { label: "Vector Search", value: "Pinecone" },
@@ -113,7 +113,7 @@ const projectsData = [
     description: "Enterprise portal built for the UCC MCA Department automating event announcements, achievement walls, and AI-generated celebration messages via Google Gemini. Features role-based administration, CSV batch import/export, photo upload pipelines, and a full Pytest validation suite.",
     tech: ["FastAPI", "MongoDB", "Beanie ODM", "React 19", "TypeScript", "Pydantic", "Gemini API"],
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2670&auto=format&fit=crop",
-    githubLink: "https://github.com/yadhu-tj/Automated-MCA.git",
+    githubLink: "https://github.com/yadhu-tj/Automated-MCA",
     liveLink: "#",
     metrics: [
       { label: "Backend", value: "FastAPI / Async" },
@@ -146,24 +146,24 @@ const additionalProjects = [
   {
     name: "ART-BAY Marketplace",
     desc: "Flask (Python 3.13) + MySQL 8 marketplace with 3D canvas stage, RBAC, Bcrypt, and email OTP.",
-    link: "https://Yadhu4u.pythonanywhere.com",
-    github: "https://github.com/yadhu-tj/ART-BAY.git",
+    link: "https://artbay.pythonanywhere.com/",
+    github: "https://github.com/yadhu-tj/ART-BAY",
     tech: "Flask, MySQL, Pytest, Jinja2",
     badge: "Live on PythonAnywhere"
   },
   {
     name: "Thought Tracker",
     desc: "Daily cognitive velocity tracker with rolling odometer digits, particle physics, and GitHub Gist cloud sync.",
-    link: "#",
-    github: "https://github.com/yadhu-tj",
+    link: "https://thought-private.vercel.app/",
+    github: "https://github.com/yadhu-tj/Thought---Private",
     tech: "React 19, TypeScript, Tailwind v4, Framer Motion",
-    badge: "Offline-First Gist DB"
+    badge: "Live on Vercel"
   },
   {
     name: "Furniture Store",
     desc: "Minimalist component-driven storefront featuring responsive hero showcases and catalogue navigation.",
     link: "https://shopfurnitures.netlify.app/",
-    github: "https://github.com/yadhu-tj",
+    github: "https://github.com/yadhu-tj/Furniture-Shop",
     tech: "React, Vite, CSS Modules",
     badge: "Live on Netlify"
   }
