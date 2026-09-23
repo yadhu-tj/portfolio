@@ -1,29 +1,42 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'lenis/dist/lenis.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const useSmoothScroll = () => {
+  const lenisRef = useRef(null);
+
   useEffect(() => {
-    // Initialize Lenis
     const lenis = new Lenis({
-      duration: 1.5, // The higher the value, the smoother/slower the scroll
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing curve
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
+      wheelMultiplier: 0.9,
     });
+    lenisRef.current = lenis;
+    window.lenis = lenis;
 
-    // The Animation Loop
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    // Connect Lenis scroll events to GSAP ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
 
-    requestAnimationFrame(raf);
+    const tickerCallback = (time) => {
+      lenis.raf(time * 1000);
+    };
 
-    // Cleanup when component unmounts
+    gsap.ticker.add(tickerCallback);
+    gsap.ticker.lagSmoothing(0);
+
     return () => {
+      gsap.ticker.remove(tickerCallback);
       lenis.destroy();
+      window.lenis = null;
     };
   }, []);
+
+  return lenisRef;
 };
 
 export default useSmoothScroll;

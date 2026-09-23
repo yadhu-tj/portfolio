@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
+    watch: {
+      ignored: ['**/details/**', '**/*.pdf'],
+    },
     hmr: {
       overlay: false // Hides that annoying full-screen error overlay if small bugs happen
     }
